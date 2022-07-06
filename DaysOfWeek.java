@@ -16,7 +16,9 @@ public class DaysOfWeek {
         year = scanner.nextInt();
 
         DaysOfWeek dd = new DaysOfWeek();
-        d1 = dd.calculateDayOfWeek(day, month, year);
+        Util utility = new Util();
+//      d1 = dd.calculateDayOfWeek(day, month, year);
+        d1 = utility.calculateDayOfWeek(day, month, year);
 
         switch (d1) {
             case 0:
@@ -43,12 +45,12 @@ public class DaysOfWeek {
         }
         scanner.close();
     }
-    public int  calculateDayOfWeek(int day, int month, int year) {
-        int y1, x, m, d1;
-        y1 = year - (14 - month) / 12;
-        x = y1 + (y1 / 4) - (y1 / 100) + (y1 / 400);
-        m = month + 12 * ((14 - month) / 12) - 2;
-        d1 = (day + x + 31 * m / 12) % 7;
-        return d1;
-    }
+//    public int  calculateDayOfWeek(int day, int month, int year) {
+//        int y1, x, m, d1;
+//        y1 = year - (14 - month) / 12;
+//        x = y1 + (y1 / 4) - (y1 / 100) + (y1 / 400);
+//        m = month + 12 * ((14 - month) / 12) - 2;
+//        d1 = (day + x + 31 * m / 12) % 7;
+//        return d1;
+//    }
 }
